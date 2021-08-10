@@ -94,6 +94,7 @@ initialSlide | integer | 0 | Slide to start on
 lazyLoad | string | 'ondemand' | Accepts 'ondemand' or 'progressive' for lazy load technique. 'ondemand' will load the image as soon as you slide to it, 'progressive' loads one image after the other when the page loads.
 mobileFirst | boolean | false | Responsive settings use mobile first calculation
 nextArrow | string (html \| jQuery selector) \| object (DOM node \| jQuery object) | `<button type="button" class="slick-next">Next</button>` | Allows you to select a node or customize the HTML for the "Next" arrow.
+outerEdgeLimit | boolean | false | Works only with variableWidth and is to remove empty space at the end of the slides whe the numeber of slides is less than the slidesToScroll
 pauseOnDotsHover | boolean | false | Pauses autoplay when a dot is hovered
 pauseOnFocus | boolean | true | Pauses autoplay when slider is focussed
 pauseOnHover | boolean | true | Pauses autoplay on hover
