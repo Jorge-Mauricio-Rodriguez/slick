@@ -66,6 +66,7 @@
                 initialSlide: 0,
                 lazyLoad: 'ondemand',
                 mobileFirst: false,
+                outerEdgeLimit: false,
                 pauseOnHover: true,
                 pauseOnFocus: true,
                 pauseOnDotsHover: false,
@@ -1188,6 +1189,14 @@
                 }
 
                 targetLeft += (_.$list.width() - targetSlide.outerWidth()) / 2;
+            }  else if (_.options.outerEdgeLimit === true) {
+              var lastSlide,
+                  lastLeft,
+                  outerEdgeLimit;
+              lastSlide = _.$slides.last();
+              lastLeft = lastSlide[0] ? lastSlide[0].offsetLeft * -1 : 0;
+              outerEdgeLimit = lastLeft - lastSlide.width() + this.$slider.width();
+              targetLeft = Math.min(Math.max(targetLeft, outerEdgeLimit), 0);
             }
         }
 
